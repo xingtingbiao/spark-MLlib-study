@@ -17,7 +17,7 @@
 
 
 
-二. MLlib 与 ml库 
+二. MLlib 与 ml库 01
 
 As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered maintenance mode. The primary Machine Learning API for Spark is now the DataFrame-based API in the spark.ml package.
 
@@ -73,6 +73,50 @@ As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered main
         DataFrame:
             DataFrame结构与Dataset是类似的, 都引入了列的概念. 与Dataset不同的是, DataFrame中的每一行都被再次封装为Row的对象. 
             需要通过该对象的方法获取到具体的值.
+
+
+
+
+
+四. MLlib 与 ml库 02
+1) Spark 提供的机器学习的算法: 
+    a. 通用算法: 分类, 回归, 聚类等
+    b. 特征工程类: 降维, 转换, 选择, 特征提取等
+    c. 数学工具: 概率统计, 矩阵运算等
+    d. 以及pipeline等
+
+
+2) MLlib 与 ml 的区别
+    a. MLlib采用RDD形式的数据结构, 而ml使用DataFrame的结构
+    b. Spark官方希望用ml逐步替换MLlib
+    c. 课程中两者兼顾
+
+
+
+
+
+五. MLlib的应用场景
+1) 海量数据的分析和挖掘
+    a. 例如对海量的房屋出租, 出售信息进行数据挖掘, 预测房价价格, 租金
+    b. 典型数据集: 波士顿放假数据集
+    c. 主要用到传统的数据挖掘算法, 例如使用回归算法
+
+2) 大数据机器学习系统
+    a. 例如自然语言处理类的系统, 推荐系统
+    b. 推荐系统, 需要实时进行数据的收集, 统计, 任务调度, 定期更新训练模型
+    c. 核心实现: Spark Streaming + MLlib
+
+
+
+
+
+------本章小结------
+本章内容回顾
+    a. MLlib的介绍
+    b. MLlib的数据格式
+    c. MLlib与ml的对比
+    d. MLlib的应用场景
+
 
 
 
