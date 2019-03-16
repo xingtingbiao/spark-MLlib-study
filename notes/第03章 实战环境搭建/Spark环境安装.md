@@ -8,3 +8,38 @@ Spark环境安装
     c. Spark安装不难, 配置需要注意, 并且不一定需要Hadoop环境
 
 
+
+二. Spark配置若干要点
+    a. 在配置前尽量先阅读官方文档, 避免直接从网上找配置教程
+
+    b. 要为节点设置好使用的内存, 否则可能导致节点利用率低;
+
+    c. 注意Spark中IP和端口号的配置, 以免UnknowHostException
+
+    配置看官网*******
+    spark-env.sh: 
+        SPARK_LOCAL_IP=hadoop001   (建议)
+
+
+    spark-defaults.conf: 
+            
+
+
+
+
+三. 学习Spark shell
+
+    a. Spark shell 是一个bash脚本, 在./bin目录下
+    b. Spark shell 为我们事先配置好了上下文(context)和会话(session)
+
+
+
+
+
+四. 实战WordCount
+
+
+
+
+
+
