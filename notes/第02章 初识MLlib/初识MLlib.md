@@ -47,9 +47,32 @@ As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered main
     c. 本地矩阵(local matrix)
         与向量相似, 本地矩阵类型为Matrix, 分为稠密和稀疏两种类型. 同样使用工厂方法Matrices来生成. 但是要注意: MLlib的矩阵是按列存储的. 
         例如下面创建一个 3 * 3 的单位矩阵:
-        Matrices.dense(3, 3, Array(1, 0, 0, 0, 1, 0, 0, 0, 1))
+        Matrices.dense(3, 3, Array(1, 0, 0, 0, 1, 0, 0, 0, 1))   
+        1.0 0.0 0.0
+        0.0 1.0 0.0   ==> 从左往右竖着数的 形成 Array(1, 0, 0, 0, 1, 0, 0, 0, 1)
+        0.0 0.0 1.0
+
+        类似地, 稀疏矩阵的创建方法: 
+        Matrices.sparse(3, 3, Array(0,1,2,3), Array(0,1,2), Array(1,1,1))
+
 
     d. 分布式矩阵(distributed matrix)
+        分布式矩阵意为把一个矩阵数据分布式存储到多个RDD中. 将分布式矩阵进行数据转换需要全局的 shuffle 函数, 最基本的分布式矩阵是: RowMatrix.
+
+
+    e. 分布式数据集
+        RDD Dataset DataFrame 都是Spark 的分布式数据集的数据格式, 三者在一定程度上可以相互转换, 有各自的适用范围. 其中RDD最为基础且简单的一种数据形式.
+
+        RDD:
+            RDD(Resilient Distributed Datasets), 弹性分布式数据集, 是Spark中结构最简单, 也是最常用的一类数据集形式.
+            可以理解为把输入数据进行简单的封装之后形成的对内存数据的抽象.
+
+        Dataset:
+            与RDD分行存储, 没有列的概念不同, Dataset引入了列的概念, 这一点类似于一个csv文件结构. 类似于一个简单的二维表.
+
+        DataFrame:
+            DataFrame结构与Dataset是类似的, 都引入了列的概念. 与Dataset不同的是, DataFrame中的每一行都被再次封装为Row的对象. 
+            需要通过该对象的方法获取到具体的值.
 
 
 
