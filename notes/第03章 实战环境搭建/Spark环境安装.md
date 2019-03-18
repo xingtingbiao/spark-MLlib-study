@@ -36,10 +36,20 @@ Spark环境安装
 
 
 
-四. 实战WordCount
+四. 实战WordCount  参考之前的Spark SQL和Spark Streaming即可
+1) WordCount简介
+    a. WordCount意为词频统计, 是大数据分析中最为基础的一种任务. 英文分词较容易, 直接分隔空格即可.
+
+    b. 实现思路: 首先将文件中所有的单词提取出来, 然后合并相同的单词.
 
 
 
 
+
+
+-------本章小结-------
+
+1. 安装Spark                  2. Spark 配置若干要点
+3. Spark local 模式搭建       4. 学习 Spark shell
 
 
