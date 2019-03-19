@@ -45,7 +45,7 @@ As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered main
         LabeledPoint(1.0, Vectors.dense(1.0, 2.0, 3.0))    y=f(x)
 
     c. 本地矩阵(local matrix)
-        与向量相似, 本地矩阵类型为Matrix, 分为稠密和稀疏两种类型. 同样使用工厂方法Matrices来生成. 但是要注意: MLlib的矩阵是按列存储的. 
+        与向量相似, 本地矩阵类型为Matrix, 分为稠密和稀疏两种类型. 同样使用工厂方法Matrices来生成. 但是要注意***: MLlib的矩阵是按列存储的. 
         例如下面创建一个 3 * 3 的单位矩阵:
         Matrices.dense(3, 3, Array(1, 0, 0, 0, 1, 0, 0, 0, 1))   
         1.0 0.0 0.0
