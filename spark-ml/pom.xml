@@ -39,16 +39,16 @@
         <!--<artifactId>spark-core_${scala.prefix.version}</artifactId>-->
         <!--<version>${spark.version}</version>-->
         <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.apache.spark</groupId>-->
-        <!--<artifactId>spark-streaming_${scala.prefix.version}</artifactId>-->
-        <!--<version>${spark.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.apache.spark</groupId>-->
-        <!--<artifactId>spark-sql_${scala.prefix.version}</artifactId>-->
-        <!--<version>${spark.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_${scala.prefix.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.prefix.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
         <!--<dependency>-->
         <!--<groupId>org.apache.spark</groupId>-->
         <!--<artifactId>spark-hive_${scala.prefix.version}</artifactId>-->
